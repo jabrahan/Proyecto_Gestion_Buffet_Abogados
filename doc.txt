@@ -1,0 +1,3 @@
+//FRONTEND
+-Install Tailwind 
+-Install EJS node (Dependencie) it is for use partials or layouts, it simplify views that you need to repeat... 
