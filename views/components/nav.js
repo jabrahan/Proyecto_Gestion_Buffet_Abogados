@@ -175,5 +175,5 @@ const logout = document.querySelector('#logout');
 logout.onclick = async () => {
 
     localStorage.removeItem('user')
-    window.location.href = '/login'
+    window.location.href = '/'
 }
