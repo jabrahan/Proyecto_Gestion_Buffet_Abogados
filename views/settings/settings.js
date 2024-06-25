@@ -357,7 +357,9 @@ async function deleteUser(id) {
         }
     })
    // cleanHTML(userTable);
+      createNotification(false, 'User deleted')
       createUserTable();
+
 
 }
 

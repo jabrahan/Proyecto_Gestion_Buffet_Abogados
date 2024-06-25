@@ -2,6 +2,7 @@ const expand_btn = document.querySelector(".expand-btn");
 
 let activeIndex;
 
+
 expand_btn.addEventListener("click", () => {
   document.body.classList.toggle("collapsed");
   

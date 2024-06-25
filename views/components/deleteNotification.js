@@ -6,7 +6,7 @@ export const createDeleteNotification =  async (element, elel, validation) => {
   
  
    if(validation){
-    deleteNotification.innerHTML = `<div class=" fixed  flex justify-center items-center  top-10 right-0 bottom-0 left-0">
+    deleteNotification.innerHTML = `<div style="z-index: 100000" class=" fixed  flex justify-center items-center  top-10 right-0 bottom-0 left-0">
     <div class="bg-white shadow-lg px-16 py-14 rounded-md text-center">
       <h1 class="text-xl mb-4 font-bold text-slate-500">Do you Want Delete</h1>
       <button id="cancelDelete" class="bg-red-500 px-4 py-2 rounded-md text-md text-white">Cancel</button>
