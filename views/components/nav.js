@@ -144,7 +144,7 @@ const createSideBar = () => {
       </div>
       <div class="avatar__name hide">
         <div class="user-name">${userfe.name}</div>
-        <div class="email">${userfe.email}</div>
+       <!-- <div class="email">${userfe.email}</div> --!>
       </div>
       <a href="#logout" class="logout hide" id="logout">
         <svg  xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-logout" width="24" height="24"

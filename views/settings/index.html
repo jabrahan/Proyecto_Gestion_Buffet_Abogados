@@ -12,7 +12,7 @@
         const user = JSON.parse(localStorage.getItem('user'))
 
         if(!user) {
-            window.location.href = '/login'
+            window.location.href = '/'
         }
     </script>
 </head>
@@ -128,7 +128,7 @@
                 <thead class="bg-gray-50">
                     <tr >
                     <th scope="col" class="px-6 py-4 font-medium text-gray-900">Name</th>
-                    <th scope="col" class="md:px-6 md:py-4 md:font-medium md:text-gray-900 md:table-cell  hidden">Date</th>
+                    <th scope="col" class="md:px-6 md:py-4 md:font-medium md:text-gray-900 max-md:hidden">Date</th>
                     <th scope="col" class="px-6 py-4 font-medium text-gray-900 flex justify-end">  
                         <button id="add-marketing" class="bg-cyan-900 hover:bg-cyan-700 text-white font-bold py-2 px-4 rounded">
                             Add
@@ -156,8 +156,8 @@
                   <h1 class="text-left text-xl font-bold mb-4 pt-4 cursor-pointer">Gender</h1>
                   <div class="">
                     <div>
-            <div class="md:flex md:flex-row md:items-center md:justify-between md:pb-6 md:ml-5  md:pt-10 flex flex-col items-center pt-10">       
-                <div class="flex items-center">
+            <div class="md:flex md:flex-row md:items-center md:justify-between md:pb-6 md:ml-5  md:pt-10  pt-10">       
+                <div class="">
                     <div class="flex bg-gray-50 items-center p-2 rounded-md border-solid border-black border-2">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-black" viewBox="0 0 20 20"
                             fill="currentColor">
@@ -165,19 +165,19 @@
                                 d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
                                 clip-rule="evenodd" />
                         </svg>
-                        <input class="bg-gray-50 outline-none ml-1 block text-black " type="text" name="" id="search_gender" placeholder="Search">
+                        <input class="bg-gray-50 outline-none ml-1 block text-black " type="text" name="" id="search_gender" placeholder="Search" style="width: -webkit-fill-available;">
                   </div>
                   
                     </div>
             </div>
 
-            <div class="overflow-hidden rounded-lg border border-gray-200 shadow-md m-5">
+            <div class="overflow-hidden rounded-lg border border-gray-200 shadow-md md:m-5 mt-5 m-0">
                 
                 <table class="w-full border-collapse bg-white text-left text-sm text-gray-500">
                 <thead class="bg-gray-50">
                     <tr >
                     <th scope="col" class="px-6 py-4 font-medium text-gray-900">Name</th>
-                    <th scope="col" class="md:px-6 md:py-4 md:font-medium md:text-gray-900 md:table-cell hidden">Date</th>
+                    <th scope="col" class="md:px-6 md:py-4 md:font-medium md:text-gray-900 max-md:hidden">Date</th>
                     <th scope="col" class="px-6 py-4 font-medium text-gray-900 flex justify-end">  
                         <button id="add-gender" class="bg-cyan-900 hover:bg-cyan-700 text-white font-bold py-2 px-4 rounded">
                             Add
@@ -205,8 +205,8 @@
               <h1 class="text-left text-xl font-bold mb-4 pt-4 cursor-pointer">Language</h1>
               <div class="">
                 <div>
-        <div class=" md:flex md:flex-row md:items-center md:justify-between md:pb-6 md:ml-5  md:pt-10 flex flex-col items-center pt-10">       
-            <div class="flex items-center">
+        <div class=" md:flex md:flex-row md:items-center md:justify-between md:pb-6 md:ml-5  md:pt-10  pt-10">       
+            <div class="">
                 <div class="flex bg-gray-50 items-center p-2 rounded-md border-solid border-black border-2">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-black" viewBox="0 0 20 20"
                         fill="currentColor">
@@ -214,19 +214,19 @@
                             d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
                             clip-rule="evenodd" />
                     </svg>
-                    <input class="bg-gray-50 outline-none ml-1 block text-black " type="text" name="" id="search_language" placeholder="Search">
+                    <input class="bg-gray-50 outline-none ml-1 block text-black " type="text" name="" id="search_language" placeholder="Search" style="width: -webkit-fill-available;">
               </div>
               
                 </div>
         </div>
 
-        <div class="overflow-hidden rounded-lg border border-gray-200 shadow-md m-5">
+        <div class="overflow-hidden rounded-lg border border-gray-200 shadow-md md:m-5 mt-5 m-0">
             
             <table class="w-full border-collapse bg-white text-left text-sm text-gray-500">
             <thead class="bg-gray-50">
                 <tr >
                 <th scope="col" class="px-6 py-4 font-medium text-gray-900">Name</th>
-                <th scope="col" class="md:px-6 md:py-4 md:font-medium md:text-gray-900 md:table-cell  hidden">Date</th>
+                <th scope="col" class="md:px-6 md:py-4 md:font-medium md:text-gray-900 max-md:hidden">Date</th>
                 <th scope="col" class="px-6 py-4 font-medium text-gray-900 flex justify-end">  
                     <button id="add-language" class="bg-cyan-900 hover:bg-cyan-700 text-white font-bold py-2 px-4 rounded">
                         Add
@@ -254,8 +254,8 @@
               <h1 class="text-left text-xl font-bold mb-4 pt-4 cursor-pointer">Type of Case</h1>
               <div class="">
                 <div>
-        <div class="md:flex md:flex-row md:items-center md:justify-between md:pb-6 md:ml-5  md:pt-10 flex flex-col items-center pt-10">       
-            <div class="flex items-center">
+        <div class="md:flex md:flex-row md:items-center md:justify-between md:pb-6 md:ml-5  md:pt-10  pt-10">       
+            <div class="">
                 <div class="flex bg-gray-50 items-center p-2 rounded-md border-solid border-black border-2">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-black" viewBox="0 0 20 20"
                         fill="currentColor">
@@ -263,19 +263,19 @@
                             d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
                             clip-rule="evenodd" />
                     </svg>
-                    <input class="bg-gray-50 outline-none ml-1 block text-black " type="text" name="" id="search_type_of_case" placeholder="Search">
+                    <input class="bg-gray-50 outline-none ml-1 block text-black " type="text" name="" id="search_type_of_case" placeholder="Search" style="width: -webkit-fill-available;">
               </div>
               
                 </div>
         </div>
 
-        <div class="overflow-hidden rounded-lg border border-gray-200 shadow-md m-5">
+        <div class="overflow-hidden rounded-lg border border-gray-200 shadow-md md:m-5 mt-5 m-0">
             
             <table class="w-full border-collapse bg-white text-left text-sm text-gray-500">
             <thead class="bg-gray-50">
                 <tr >
                 <th scope="col" class="px-6 py-4 font-medium text-gray-900">Name</th>
-                <th scope="col" class="md:px-6 md:py-4 md:font-medium md:text-gray-900 md:table-cell  hidden">Date</th>
+                <th scope="col" class="md:px-6 md:py-4 md:font-medium md:text-gray-900 max-md:hidden">Date</th>
                 <th scope="col" class="px-6 py-4 font-medium text-gray-900 flex justify-end">  
                     <button id="add-type-of-case" class="bg-cyan-900 hover:bg-cyan-700 text-white font-bold py-2 px-4 rounded">
                         Add
@@ -303,8 +303,8 @@
               <h1 class="text-left text-xl font-bold mb-4 pt-4 cursor-pointer">Status of Case</h1>
               <div class="">
                 <div>
-        <div class="md:flex md:flex-row md:items-center md:justify-between md:pb-6 md:ml-5  md:pt-10 flex flex-col items-center pt-10">       
-            <div class="flex items-center">
+        <div class="md:flex md:flex-row md:items-center md:justify-between md:pb-6 md:ml-5  md:pt-10  pt-10">       
+            <div class="">
                 <div class="flex bg-gray-50 items-center p-2 rounded-md border-solid border-black border-2">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-black" viewBox="0 0 20 20"
                         fill="currentColor">
@@ -312,19 +312,19 @@
                             d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
                             clip-rule="evenodd" />
                     </svg>
-                    <input class="bg-gray-50 outline-none ml-1 block text-black " type="text" name="" id="search_status" placeholder="Search">
+                    <input class="bg-gray-50 outline-none ml-1 block text-black " type="text" name="" id="search_status" placeholder="Search" style="width: -webkit-fill-available;">
               </div>
               
                 </div>
         </div>
 
-        <div class="overflow-hidden rounded-lg border border-gray-200 shadow-md m-5">
+        <div class="overflow-hidden rounded-lg border border-gray-200 shadow-md md:m-5 mt-5 m-0">
             
             <table class="w-full border-collapse bg-white text-left text-sm text-gray-500">
             <thead class="bg-gray-50">
                 <tr >
                 <th scope="col" class="px-6 py-4 font-medium text-gray-900">Name</th>
-                <th scope="col" class="md:px-6 md:py-4 md:font-medium md:text-gray-900 md:table-cell  hidden">Date</th>
+                <th scope="col" class="md:px-6 md:py-4 md:font-medium md:text-gray-900 max-md:hidden">Date</th>
                 <th scope="col" class="px-6 py-4 font-medium text-gray-900 flex justify-end">  
                     <button id="add-status" class="bg-cyan-900 hover:bg-cyan-700 text-white font-bold py-2 px-4 rounded">
                         Add

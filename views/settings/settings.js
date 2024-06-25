@@ -759,11 +759,11 @@ function createMarketingItem(array) {
         const tr = document.createElement('tr')
         tr.classList.add('hover:bg-gray-50')
         const tdName = document.createElement('th')
-        tdName.classList.add('flex', 'md:gap-3', 'md:px-6', 'md:py-4', 'font-normal', 'text-gray-900', 'gap-1', 'pt-1', 'pl-1', 'm-5', 'md:m-0')
+        tdName.classList.add( 'md:gap-3', 'md:px-6', 'md:py-4', 'font-normal', 'text-gray-900', 'gap-1', 'pt-1', 'pl-3', 'm-5', 'md:m-0')
         const tdDate = document.createElement('th')
-        tdDate.classList.add('px-6', 'py-4', 'hidden', 'md:table-cell')
+        tdDate.classList.add('px-6', 'py-4', 'max-md:hidden')
         const tdDelete = document.createElement('th')
-        tdDelete.classList.add('flex', 'md:gap-3', 'md:px-6', 'md:py-4', 'font-normal', 'text-gray-900', 'gap-1', 'pt-1', 'pl-1', 'text-end', 'justify-end', 'm-5', 'md:m-0')
+        tdDelete.classList.add('flex', 'md:gap-3', 'md:px-6', 'md:py-4', 'font-normal', 'text-gray-900', 'gap-1', 'pt-1', 'pl-3', 'text-end', 'justify-end', 'm-5', 'md:m-0')
         const btnDelete = document.createElement('button')
         btnDelete.id = _id
         btnDelete.innerHTML = `<svg 
@@ -1003,10 +1003,11 @@ function createGenderItem(array) {
        const tr = document.createElement('tr')
        tr.classList.add('hover:bg-gray-50')
        const tdName = document.createElement('th')
-       tdName.classList.add('flex', 'md:gap-3', 'md:px-6', 'md:py-4', 'font-normal', 'text-gray-900', 'gap-1', 'pt-1', 'pl-1')
+       tdName.classList.add( 'md:gap-3', 'md:px-6', 'md:py-4', 'font-normal', 'text-gray-900', 'gap-1', 'pt-1', 'pl-3', 'm-5', 'md:m-0')
        const tdDate = document.createElement('th')
+       tdDate.classList.add('max-md:hidden', 'px-6', 'py-4')
        const tdDelete = document.createElement('th')
-       tdDelete.classList.add('flex', 'md:gap-3', 'md:px-6', 'md:py-4', 'font-normal', 'text-gray-900', 'gap-1', 'pt-1', 'pl-1', 'text-end', 'justify-end')
+       tdDelete.classList.add('flex', 'md:gap-3', 'md:px-6', 'md:py-4', 'font-normal', 'text-gray-900', 'gap-1', 'pt-1', 'pl-3', 'text-end', 'justify-end', 'm-5', 'md:m-0')
        const btnDelete = document.createElement('button')
        btnDelete.id = _id
        btnDelete.innerHTML = `<svg 
@@ -1178,7 +1179,7 @@ async function createLanguage() {
             const response = await axios.post('/api/languages/addLanguage', languageObj)
             console.log(response)
             openModalLanguage(false)
-            createNotificationForm(false, 'Language created', notiFormLanguage)
+            createNotification(false, 'Language created')
             //cleanHTML(genderTable)
             createLanguageTable(true)
             formLanguage.reset()
@@ -1242,10 +1243,11 @@ function createLanguageItem(array) {
        const tr = document.createElement('tr')
        tr.classList.add('hover:bg-gray-50')
        const tdName = document.createElement('th')
-       tdName.classList.add('flex', 'md:gap-3', 'md:px-6', 'md:py-4', 'font-normal', 'text-gray-900', 'gap-1', 'pt-1', 'pl-1')
+       tdName.classList.add( 'md:gap-3', 'md:px-6', 'md:py-4', 'font-normal', 'text-gray-900', 'gap-1', 'pt-1', 'pl-3', 'm-5', 'md:m-0')
        const tdDate = document.createElement('th')
+       tdDate.classList.add('max-md:hidden', 'px-6', 'py-4')
        const tdDelete = document.createElement('th')
-       tdDelete.classList.add('flex', 'md:gap-3', 'md:px-6', 'md:py-4', 'font-normal', 'text-gray-900', 'gap-1', 'pt-1', 'pl-1', 'text-end', 'justify-end')
+       tdDelete.classList.add('flex', 'md:gap-3', 'md:px-6', 'md:py-4', 'font-normal', 'text-gray-900', 'gap-1', 'pt-1', 'pl-3', 'text-end', 'justify-end', 'm-5', 'md:m-0')
        const btnDelete = document.createElement('button')
        btnDelete.id = _id
        btnDelete.innerHTML = `<svg 
@@ -1481,10 +1483,11 @@ function createTypeOfCaseItem(array) {
        const tr = document.createElement('tr')
        tr.classList.add('hover:bg-gray-50')
        const tdName = document.createElement('th')
-       tdName.classList.add('flex', 'md:gap-3', 'md:px-6', 'md:py-4', 'font-normal', 'text-gray-900', 'gap-1', 'pt-1', 'pl-1')
+       tdName.classList.add( 'md:gap-3', 'md:px-6', 'md:py-4', 'font-normal', 'text-gray-900', 'gap-1', 'pt-1', 'pl-3', 'm-5', 'md:m-0')
        const tdDate = document.createElement('th')
+       tdDate.classList.add('max-md:hidden', 'px-6', 'py-4')
        const tdDelete = document.createElement('th')
-       tdDelete.classList.add('flex', 'md:gap-3', 'md:px-6', 'md:py-4', 'font-normal', 'text-gray-900', 'gap-1', 'pt-1', 'pl-1', 'text-end', 'justify-end')
+       tdDelete.classList.add('flex', 'md:gap-3', 'md:px-6', 'md:py-4', 'font-normal', 'text-gray-900', 'gap-1', 'pt-1', 'pl-3', 'text-end', 'justify-end', 'm-5', 'md:m-0')
        const btnDelete = document.createElement('button')
        btnDelete.id = _id
        btnDelete.innerHTML = `<svg 
@@ -1716,10 +1719,11 @@ function createStatusItem(array) {
        const tr = document.createElement('tr')
        tr.classList.add('hover:bg-gray-50')
        const tdName = document.createElement('th')
-       tdName.classList.add('flex', 'md:gap-3', 'md:px-6', 'md:py-4', 'font-normal', 'text-gray-900', 'gap-1', 'pt-1', 'pl-1')
+       tdName.classList.add( 'md:gap-3', 'md:px-6', 'md:py-4', 'font-normal', 'text-gray-900', 'gap-1', 'pt-1', 'pl-3', 'm-5', 'md:m-0')
        const tdDate = document.createElement('th')
+       tdDate.classList.add('max-md:hidden', 'px-6', 'py-4')
        const tdDelete = document.createElement('th')
-       tdDelete.classList.add('flex', 'md:gap-3', 'md:px-6', 'md:py-4', 'font-normal', 'text-gray-900', 'gap-1', 'pt-1', 'pl-1', 'text-end', 'justify-end')
+       tdDelete.classList.add('flex', 'md:gap-3', 'md:px-6', 'md:py-4', 'font-normal', 'text-gray-900', 'gap-1', 'pt-1', 'pl-3', 'text-end', 'justify-end', 'm-5', 'md:m-0')
        const btnDelete = document.createElement('button')
        btnDelete.id = _id
        btnDelete.innerHTML = `<svg 
@@ -1804,7 +1808,7 @@ async function updateStatus(id) {
         try {
             const response = await axios.put(`/api/status/updateStatus/`, { name: status.value, date: date, _id: id })
             console.log(response)
-            openModalStatus(false)
+            openModalStatusOfCase(false)
             createStatusTable(true)
          createNotification(false, 'Status updated successfully')
             formStatus.reset()
