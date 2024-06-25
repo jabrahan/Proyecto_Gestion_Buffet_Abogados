@@ -69,15 +69,15 @@
                       
                         </div>
                     </div>
-            <div class="overflow-hidden rounded-lg border border-gray-200 shadow-md m-5">
+            <div class="rounded-lg border border-gray-200 shadow-md m-5">
                 
                 <table class="w-full border-collapse bg-white text-left text-sm text-gray-500">
                 <thead class="bg-gray-50">
                     <tr >
                     <th scope="col" class="px-6 py-4 font-medium text-gray-900">Name</th>
-                    <th scope="col" class="md:px-6 md:py-4 md:font-medium md:text-gray-900 md:table-cell  hidden">State</th>
-                    <th scope="col" class="md:px-6 md:py-4 md:font-medium md:text-gray-900 md:table-cell hidden">Role</th>
-                    <th scope="col" class="md:px-6 md:py-4 md:font-medium md:text-gray-900 md:table-cell hidden ">Email</th>
+                    <th scope="col" class="md:px-6 md:py-4 md:font-medium md:text-gray-900 max-md:hidden">State</th>
+                    <th scope="col" class="md:px-6 md:py-4 md:font-medium md:text-gray-900 max-md:hidden">Role</th>
+                    <th scope="col" class="md:px-6 md:py-4 md:font-medium md:text-gray-900 max-lg:hidden">Email</th>
                     <th scope="col" class="px-6 py-4 font-medium text-gray-900 flex justify-end">  
                         <button id="add" class="bg-cyan-900 hover:bg-cyan-700 text-white font-bold py-2 px-4 rounded">
                             Add
@@ -356,7 +356,7 @@
 
     
       <!-- modal Users -->
-      <div id="modal_overlay" class="hidden  inset-0  h-screen w-full flex justify-center items-center fixed pt-10 md:pt-0">
+      <div id="modal_overlay" class="hidden inset-0  h-screen w-full flex justify-center items-center fixed pt-10 md:pt-0 max-sm:pb-2 max-sm:absolute" style="z-index: 100000">
 
                 <!-- modal -->
                 <div id="modal" class="pacity-0 transform -translate-y-full scale-150  relative w-10/12 md:w-1/2  md:h-3/4 bg-white rounded shadow-lg transition-opacity transition-transform duration-300">
@@ -480,7 +480,7 @@
       
 
       <!-- Modal add Marketing Source -->
-      <div id="modal_overlay_marketing" class="hidden  inset-0  h-screen w-full flex justify-center items-center fixed pt-10 md:pt-0">
+      <div id="modal_overlay_marketing" class="hidden inset-0  h-screen w-full flex justify-center items-center fixed pt-10 md:pt-0 max-sm:absolute" style="z-index: 100000;">
 
         <!-- modal -->
         <div id="modal_marketing" class="pacity-0 transform -translate-y-full scale-150  relative w-10/12 md:w-1/2  md:h-3/4 bg-white rounded shadow-lg transition-opacity transition-transform duration-300">
@@ -534,7 +534,7 @@
       </div>
 
       <!-- Modal add Gender -->
-      <div id="modal_overlay_gender" class="hidden inset-0  h-screen w-full flex justify-center items-center fixed pt-10 md:pt-0">
+      <div id="modal_overlay_gender" class="hidden inset-0   h-screen w-full flex justify-center items-center fixed pt-10 md:pt-0 max-sm:absolute" style="z-index: 100000;">
 
         <!-- modal -->
         <div id="modal_gender" class="pacity-0 transform -translate-y-full scale-150  relative w-10/12 md:w-1/2  md:h-3/4 bg-white rounded shadow-lg transition-opacity transition-transform duration-300">
@@ -588,7 +588,7 @@
       </div>
 
       <!-- Modal add Language -->
-      <div id="modal_overlay_language" class="hidden inset-0  h-screen w-full flex justify-center items-center fixed pt-10 md:pt-0">
+      <div id="modal_overlay_language" class="hidden inset-0  z-1000000000 h-screen w-full flex justify-center items-center fixed pt-10 md:pt-0 max-sm:absolute" style="z-index: 100000;">
 
         <!-- modal -->
         <div id="modal_language" class="pacity-0 transform -translate-y-full scale-150  relative w-10/12 md:w-1/2  md:h-3/4 bg-white rounded shadow-lg transition-opacity transition-transform duration-300">
@@ -642,7 +642,7 @@
       </div>
 
       <!-- Modal Type of Case -->
-      <div id="modal_overlay_type_of_case" class="hidden inset-0  h-screen w-full flex justify-center items-center fixed pt-10 md:pt-0">
+      <div id="modal_overlay_type_of_case" class="hidden inset-0 z-1000000000  h-screen w-full flex justify-center items-center fixed pt-10 md:pt-0 max-sm:absolute" style="z-index: 100000;">
 
         <!-- modal -->
         <div id="modal_type_of_case" class="pacity-0 transform -translate-y-full scale-150  relative w-10/12 md:w-1/2  md:h-3/4 bg-white rounded shadow-lg transition-opacity transition-transform duration-300">
@@ -696,7 +696,7 @@
       </div>
 
       <!-- Modal Status Case -->
-      <div id="modal_overlay_status" class="hidden inset-0  h-screen w-full flex justify-center items-center fixed pt-10 md:pt-0">
+      <div id="modal_overlay_status" class="hidden inset-0 z-1000000000 h-screen w-full flex justify-center items-center fixed pt-10 md:pt-0 max-sm:absolute:" style="z-index: 100000;">
 
         <!-- modal -->
         <div id="modal_status" class="pacity-0 transform -translate-y-full scale-150  relative w-10/12 md:w-1/2  md:h-3/4 bg-white rounded shadow-lg transition-opacity transition-transform duration-300">

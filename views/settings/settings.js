@@ -324,7 +324,15 @@ async function userCreate(e) {
 
                             //cleanHTML(userTable)
 
-                             createUserTable();
+
+                            if ( await response) {
+                                setTimeout(() => {
+                               createUserTable(true); 
+                            }, 300)
+                                
+                            } 
+                            
+                             
 
 
             } else {
@@ -397,7 +405,7 @@ function createUser(array) {
         const divName = document.createElement('div')
         divName.classList.add('font-medium', 'text-gray-700')
         const thName = document.createElement('th')
-        thName.classList.add('flex', 'md:gap-3', 'md:px-6', 'md:py-4', 'font-normal', 'text-gray-900', 'gap-1', 'pt-1', 'pl-1')
+        thName.classList.add('flex', 'md:gap-3', 'md:px-6', 'md:py-4', 'font-normal', 'text-gray-900', 'gap-1', 'pt-1', 'pl-1', 'max-md:m-1')
         const divIMG = document.createElement('div')
         divIMG.classList.add('relative', 'h-10', 'w-10')
         const img = document.createElement('img')
@@ -407,9 +415,9 @@ function createUser(array) {
         const divInfo = document.createElement('div')
         divInfo.classList.add('text-sm')
         const divEmail = document.createElement('div')
-        divEmail.classList.add('text-gray-400')
+        divEmail.classList.add('text-gray-400', 'max-sm:hidden')
         const thState = document.createElement('th')
-        thState.classList.add('px-6', 'py-4', 'hidden', 'md:table-cell')
+        thState.classList.add('px-6', 'py-4', 'max-md:hidden')
         const state = document.createElement('span')
         const statePoint = document.createElement('span')
 
@@ -426,12 +434,12 @@ function createUser(array) {
             }
 
         const thRole = document.createElement('th')
-        thRole.classList.add('px-6', 'py-4', 'hidden', 'md:table-cell')
+        thRole.classList.add('px-6', 'py-4', 'max-md:hidden')
         thRole.innerHTML = element.role
 
 
         const thEmail = document.createElement('th')
-        thEmail.classList.add('px-6', 'py-4', 'hidden', 'md:table-cell')
+        thEmail.classList.add('px-6', 'py-4', 'max-lg:hidden')
         const spanEmail = document.createElement('span')
         spanEmail.classList.add('inline-flex', 'items-center', 'gap-1', 'rounded-full', 'bg-blue-50', 'px-2', 'py-1', 'text-xs', 'font-semibold', 'text-blue-600')
         spanEmail.innerHTML = element.email
