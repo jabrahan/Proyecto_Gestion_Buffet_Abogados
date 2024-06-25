@@ -326,3 +326,17 @@ nav {
     }
     
 }
+
+@media screen and (max-width: 576px) {
+  .sidebar {
+    
+    padding: 0.5rem 0.5rem;
+    
+  }
+  
+  body.collapsed .sidebar {
+    max-width: 4rem;
+    display: flex;
+  }
+  
+}
