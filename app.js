@@ -26,7 +26,7 @@ async function conectBD() {
 //Routes Frontend
 app.use(express.json());
 app.use("/src", express.static(path.resolve("src")));
-app.use("/", express.static(path.resolve("views", "home")));
+//app.use("/", express.static(path.resolve("views", "home")));
 app.use("/Login", express.static(path.resolve("views", "login")));
 app.use("/components", express.static(path.resolve("views", "components")));
 app.use("/clients", express.static(path.resolve("views", "clients")));
