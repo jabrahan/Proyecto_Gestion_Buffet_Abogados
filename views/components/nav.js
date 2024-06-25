@@ -2,6 +2,8 @@ const nav = document.querySelector('#nav');
 
 const userfe = JSON.parse(localStorage.getItem('user'));
 
+
+
 const createSideBar = () => {
     nav.innerHTML = `
     <nav class=" bg-cyan-800 sidebar shadow-md">
@@ -58,7 +60,7 @@ const createSideBar = () => {
               <path d="M15 4m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v14a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" />
               <path d="M4 20l14 0" />
             </svg>
-            <span class="link hide">Clients</span>
+            <span class="link hide">Leads</span>
             <span class="tooltip__content bg-cyan-950">Clients</span>
           </a>
         </li>
@@ -71,7 +73,7 @@ const createSideBar = () => {
               <path d="M10 3.2a9 9 0 1 0 10.8 10.8a1 1 0 0 0 -1 -1h-6.8a2 2 0 0 1 -2 -2v-7a.9 .9 0 0 0 -1 -.8" />
               <path d="M15 3.5a9 9 0 0 1 5.5 5.5h-4.5a1 1 0 0 1 -1 -1v-4.5" />
             </svg>
-            <span class="link hide">Add Client</span>
+            <span class="link hide">Add Lead</span>
             <span class="tooltip__content bg-cyan-950">Add Client</span>
           </a>
         </li>
@@ -92,7 +94,7 @@ const createSideBar = () => {
             <span class="tooltip__content bg-cyan-950">Reports</span>
           </a>
         </li>
-        <li>
+     <!--   <li>
           <a href="#Calendar" title="Calendar" class="tooltip hover:bg-cyan-600 ">
             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-building-factory-2" width="24"
               height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
@@ -107,7 +109,7 @@ const createSideBar = () => {
             <span class="link hide">Calendar</span>
             <span class="tooltip__content bg-cyan-950">Calendar</span>
           </a>
-        </li>
+        </li> -->
         <li>
           <a href="/settings" title="Settings" class="tooltip hover:bg-cyan-600 ">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2"
@@ -122,7 +124,7 @@ const createSideBar = () => {
             <span class="tooltip__content bg-cyan-950">Settings</span>
           </a>
         </li>
-        <li>
+     <!--   <li>
           <a href="#notifications" title="Notifications" class="tooltip hover:bg-cyan-600 ">
             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-bell" width="24" height="24"
               viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
@@ -134,7 +136,7 @@ const createSideBar = () => {
             <span class="link hide">Notifications</span>
             <span class="tooltip__content bg-cyan-950">Notifications</span>
           </a>
-        </li>
+        </li> -->
       </ul>
     </div>
     <div class="sidebar__profile">

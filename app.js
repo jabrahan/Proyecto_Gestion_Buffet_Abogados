@@ -9,6 +9,7 @@ const genderRouter = require("./controllers/genders");
 const languageRouter = require("./controllers/languages");
 const typeofcaseRouter = require("./controllers/typeofcases");
 const statusRouter = require("./controllers/status");
+const clientRouter = require("./controllers/clients");
 
 //Config BD
 
@@ -48,6 +49,7 @@ app.use('/api/genders', genderRouter)
 app.use('/api/languages', languageRouter)
 app.use('/api/typeofcases', typeofcaseRouter)
 app.use('/api/status', statusRouter)
+app.use('/api/clients', clientRouter)
 
 
 

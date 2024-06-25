@@ -938,10 +938,22 @@ async function createGender() {
             try {
             const response = await axios.post('/api/genders/addGender', genderObj)
             console.log(response)
+
             openModalGender(false)
             createNotification(false, 'Gender created')
+
+
+            if ( await response) {
+                setTimeout(() => {
+                    createGenderTable(true)
+                }, 300)
+
+                
+            } 
+
+
             //cleanHTML(genderTable)
-            createGenderTable(true)
+            
             formGender.reset()
         } catch (error) {
             console.log(error)
@@ -1181,7 +1193,18 @@ async function createLanguage() {
             openModalLanguage(false)
             createNotification(false, 'Language created')
             //cleanHTML(genderTable)
-            createLanguageTable(true)
+            
+
+            if ( await response) {
+                setTimeout(() => {
+                    createLanguageTable(true)
+                }, 300)
+
+                
+            } 
+
+
+
             formLanguage.reset()
         } catch (error) {
             console.log(error)
@@ -1420,6 +1443,14 @@ async function createTypeOfCase() {
             console.log(response)
             openModalTypeOfCase(false)
             createNotificationForm(false, 'Type of Case created', notiFormTypeOfCase)
+
+            if ( await response) {
+                setTimeout(() => {
+                    createTypeOfCaseTable(true)
+                }, 300)
+
+                
+            } 
             //cleanHTML(genderTable)
             
             formTypeOfCase.reset()
@@ -1657,8 +1688,15 @@ async function createStatusOfCase() {
             console.log(response)
             openModalStatusOfCase(false)
             createNotificationForm(false, 'Status created', notiFormStatus)
+  
+            if ( await response) {
+                setTimeout(() => {
+                   createStatusTable(true)
+                }, 300)         
+            } 
+                    
             //cleanHTML(genderTable)
-            createStatusTable(true)
+            
             formStatus.reset()
         } catch (error) {
             console.log(error)

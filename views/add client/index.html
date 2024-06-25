@@ -16,7 +16,7 @@
         }
     </script>
 </head>
-<body >
+<body class="collapsed" >
     <div>
         <nav class="fixed pb-8 h-full" id="nav">
             </nav>
@@ -24,8 +24,9 @@
 
             </nav>    
     </div>
-    <main class="relative main_menu" >
+    <main class="relative main_collapse" >
         <!-- component -->    
+         <div class="flex justify-end" id="notification"></div>
         
         <form id="form">
 
@@ -220,7 +221,7 @@
                     <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="legal-representative">
                     Legal Representative
                     </label>
-                    <select class="block appearance-none w-full bg-grey-lighter border border-grey-lighter text-grey-darker py-3 px-4 pr-8 rounded" id="legal-representative">
+                    <select class="block appearance-none w-full bg-grey-lighter border border-grey-lighter text-grey-darker py-3 px-4 pr-8 rounded" id="legal-representatives">
                         <option></option>
                     </select>
                     <p class="text-red text-xs italic"></p>
@@ -258,7 +259,7 @@
                       <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="date">
                       Scheduled Date
                       </label>
-                      <input class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-red rounded py-3 px-4 mb-3" id="notes" type="date" placeholder="Date" rows="5"> 
+                      <input class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-red rounded py-3 px-4 mb-3" id="date" type="date" placeholder="Date" rows="5"> 
                       
                   </div>
             </span>
@@ -278,7 +279,8 @@
     <script src="../components/nav.js"></script>
     <script src="../../src/js/navSideBar.js"></script>
     <script src="../components/navAccount.js"></script>
-    <script src="./addClient.js" ></script>
+    <script src="./addClient.js "  type="module"></script>
+    <script src="../components/notification.js"></script>
  
 </body>
 </html>

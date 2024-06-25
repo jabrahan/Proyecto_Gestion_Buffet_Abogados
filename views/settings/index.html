@@ -16,7 +16,7 @@
         }
     </script>
 </head>
-<body >
+<body class="collapsed">
     <div>
         
         <nav class="fixed pb-8 h-full" id="nav">
@@ -26,7 +26,7 @@
     </div>
 
 
-<main class="relative main_menu" >
+<main class="relative main_collapse" >
         <div class="flex justify-end" id="notification">
         </div>
         
@@ -38,7 +38,7 @@
                 <button class="inline-block text-black hover:text-black hover:bg-cyan-200 hover:border-b hover:border-black  focus:text-black focus:border-black focus:border-b rounded-t-lg py-4 px-4 text-lg font-medium text-center border-transparent border-b-2 active" id="users-tab" data-tabs-target="#users" type="button" role="tab" aria-controls="users" aria-selected="true">Users</button>
             </li>
             <li class="mr-2" role="presentation">
-                <button class="inline-block text-black hover:text-black hover:bg-cyan-200 hover:border-b hover:border-black  focus:text-black focus:border-black focus:border-b rounded-t-lg py-4 px-4 text-lg font-medium text-center border-transparent border-b-2 " id="client-tab" data-tabs-target="#client" type="button" role="tab" aria-controls="client" aria-selected="false">Client</button>
+                <button class="inline-block text-black hover:text-black hover:bg-cyan-200 hover:border-b hover:border-black  focus:text-black focus:border-black focus:border-b rounded-t-lg py-4 px-4 text-lg font-medium text-center border-transparent border-b-2 " id="client-tab" data-tabs-target="#client" type="button" role="tab" aria-controls="client" aria-selected="false">Leads</button>
             </li>
      <!--      <li class="mr-2" role="presentation">
                 <button class="inline-block text-black hover:text-black hover:bg-cyan-200 hover:border-b hover:border-black  focus:text-black focus:border-black focus:border-b rounded-t-lg py-4 px-4 text-lg font-medium text-center border-transparent border-b-2" id="settings-tab" data-tabs-target="#settings" type="button" role="tab" aria-controls="settings" aria-selected="false">Settings</button>
@@ -96,7 +96,7 @@
             
 
         <div class=" p-4 rounded-lg hidden max-sm:p-0" id="client" role="tabpanel" aria-labelledby="client-tab">
-            <p class="text-gray-500 dark:text-gray-400 text-sm rounded-lg p-4 dark:bg-gray-800 "><strong class="font-medium text-gray-800 dark:text-white">Client Form options</strong>. In this section you can add, edit or delete options for the diferents fields in the client form.</p>
+            <p class="text-gray-500 dark:text-gray-400 text-sm rounded-lg p-4 dark:bg-gray-800 "><strong class="font-medium text-gray-800 dark:text-white">Leads Form options</strong>. In this section you can add, edit or delete options for the diferents fields in the client form.</p>
 
         <!-- Marketing Information-->
 
@@ -356,7 +356,7 @@
 
     
       <!-- modal Users -->
-      <div id="modal_overlay" class="hidden inset-0  h-screen w-full flex justify-center items-center fixed pt-10 md:pt-0 max-sm:pb-2 max-sm:absolute" style="z-index: 100000">
+      <div id="modal_overlay" class="hidden inset-0  h-screen w-full flex justify-center items-center fixed pt-10 md:pt-0 max-sm:pb-2 " style="z-index: 100000">
 
                 <!-- modal -->
                 <div id="modal" class="pacity-0 transform -translate-y-full scale-150  relative w-10/12 md:w-1/2  md:h-3/4 bg-white rounded shadow-lg transition-opacity transition-transform duration-300 max-sm:mt-64">
@@ -480,7 +480,7 @@
       
 
       <!-- Modal add Marketing Source -->
-      <div id="modal_overlay_marketing" class="hidden inset-0  h-screen w-full flex justify-center items-center fixed pt-10 md:pt-0 max-sm:absolute" style="z-index: 100000;">
+      <div id="modal_overlay_marketing" class="hidden inset-0  h-screen w-full flex justify-center items-center fixed pt-10 md:pt-0 " style="z-index: 100000;">
 
         <!-- modal -->
         <div id="modal_marketing" class="pacity-0 transform -translate-y-full scale-150  relative w-10/12 md:w-1/2  md:h-3/4 bg-white rounded shadow-lg transition-opacity transition-transform duration-300">
@@ -534,7 +534,7 @@
       </div>
 
       <!-- Modal add Gender -->
-      <div id="modal_overlay_gender" class="hidden inset-0   h-screen w-full flex justify-center items-center fixed pt-10 md:pt-0 max-sm:absolute" style="z-index: 100000;">
+      <div id="modal_overlay_gender" class="hidden inset-0   h-screen w-full flex justify-center items-center fixed pt-10 md:pt-0 " style="z-index: 100000;">
 
         <!-- modal -->
         <div id="modal_gender" class="pacity-0 transform -translate-y-full scale-150  relative w-10/12 md:w-1/2  md:h-3/4 bg-white rounded shadow-lg transition-opacity transition-transform duration-300">
@@ -588,7 +588,7 @@
       </div>
 
       <!-- Modal add Language -->
-      <div id="modal_overlay_language" class="hidden inset-0  z-1000000000 h-screen w-full flex justify-center items-center fixed pt-10 md:pt-0 max-sm:absolute" style="z-index: 100000;">
+      <div id="modal_overlay_language" class="hidden inset-0  z-1000000000 h-screen w-full flex justify-center items-center fixed pt-10 md:pt-0 " style="z-index: 100000;">
 
         <!-- modal -->
         <div id="modal_language" class="pacity-0 transform -translate-y-full scale-150  relative w-10/12 md:w-1/2  md:h-3/4 bg-white rounded shadow-lg transition-opacity transition-transform duration-300">
@@ -642,7 +642,7 @@
       </div>
 
       <!-- Modal Type of Case -->
-      <div id="modal_overlay_type_of_case" class="hidden inset-0 z-1000000000  h-screen w-full flex justify-center items-center fixed pt-10 md:pt-0 max-sm:absolute" style="z-index: 100000;">
+      <div id="modal_overlay_type_of_case" class="hidden inset-0 z-1000000000  h-screen w-full flex justify-center items-center fixed pt-10 md:pt-0 " style="z-index: 100000;">
 
         <!-- modal -->
         <div id="modal_type_of_case" class="pacity-0 transform -translate-y-full scale-150  relative w-10/12 md:w-1/2  md:h-3/4 bg-white rounded shadow-lg transition-opacity transition-transform duration-300">
@@ -696,7 +696,7 @@
       </div>
 
       <!-- Modal Status Case -->
-      <div id="modal_overlay_status" class="hidden inset-0 z-1000000000 h-screen w-full flex justify-center items-center fixed pt-10 md:pt-0 max-sm:absolute:" style="z-index: 100000;">
+      <div id="modal_overlay_status" class="hidden inset-0 z-1000000000 h-screen w-full flex justify-center items-center fixed pt-10 md:pt-0 :" style="z-index: 100000;">
 
         <!-- modal -->
         <div id="modal_status" class="pacity-0 transform -translate-y-full scale-150  relative w-10/12 md:w-1/2  md:h-3/4 bg-white rounded shadow-lg transition-opacity transition-transform duration-300">
