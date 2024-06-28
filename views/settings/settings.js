@@ -133,7 +133,7 @@ searchEmployee.addEventListener('input', () => {
         createUserTable(true)
     } else {
        // cleanHTML(userTable)
-        console.log(searchValue)
+      //  console.log(searchValue)
         createUserTable(false, searchValue);
     }
 })
@@ -350,7 +350,7 @@ async function userCreate(e) {
 
 async function deleteUser(id) {
     
-    console.log(id)
+   // console.log(id)
     const response = await axios.delete('/api/users/deleteUser', {
         params: {
             email: id
@@ -537,7 +537,7 @@ async function editUser( emailUser , id) {
             params: { email: emailUser }
         })
         const data = response.data
-        console.log(data) 
+      //  console.log(data) 
         const { name, lastName, email, phone, status, role, direction, password, id } = data
         userName.value = name
         userLastName.value = lastName
@@ -567,7 +567,7 @@ async function userEdit(idUser) {
     } else {
     
     
-    console.log(idUser)
+   // console.log(idUser)
     try {
         const response = await axios.put('/api/users/updateOneUser', {
             userName: userName.value,

@@ -27,7 +27,7 @@ async   function createLeadsTable(valid ,search) {
         try {
         const response = await axios.get('/api/clients/allClients')
         const data = response.data
-        console.log(data)
+       // console.log(data)
         createLeads(data)
         
     } catch (error) {
@@ -131,7 +131,7 @@ function createLeads(data) {
 }
 
 async function deleteLead(id) {
-    console.log(id)
+   // console.log(id)
     const response = await axios.delete('/api/clients/deleteClient', {
         params: {
             idd: id

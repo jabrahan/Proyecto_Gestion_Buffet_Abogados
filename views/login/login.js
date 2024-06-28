@@ -21,13 +21,13 @@ login.addEventListener('click', async function() {
             password: password.value
         };
 
-        console.log(data);
+      //  console.log(data);
 
         if(!data.user) {
-            console.log('Email is required');
+          //  console.log('Email is required');
             createNotification( true, 'Email is required');
         } else if(!data.password) {
-            console.log('Password is required');
+         //   console.log('Password is required');
             createNotification( true, 'Password is required');
         } else if (data.user && data.password) {
             try {
@@ -36,7 +36,7 @@ login.addEventListener('click', async function() {
 
                 const datas = response
 
-                console.log(datas)
+             //   console.log(datas)
 
                 if(datas.status === 200) {
                     if (datas.data.password === data.password && datas.data.status === 'active') {
@@ -49,7 +49,7 @@ login.addEventListener('click', async function() {
                             role, 
                             status
                         }
-                        console.log(user)
+                      //  console.log(user)
 
                         localStorage.setItem('user', JSON.stringify(user))
                         

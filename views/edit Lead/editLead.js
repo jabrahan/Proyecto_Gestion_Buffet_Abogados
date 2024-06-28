@@ -53,9 +53,9 @@ async function checkLead() {
             }
         })
         const data = response.data
-        console.log(data)
+       // console.log(data)
         if (data) {
-            console.log(data)
+         //   console.log(data)
 
 
             createLead(data)
@@ -64,7 +64,7 @@ async function checkLead() {
             window.location.href = '/clients'
         }
     } catch (error) {
-        console.log(error)
+       // console.log(error)
         lead.innerHTML = 'Lead not found'
         lead.classList.add('text-red-600', 'font-bold', 'text-2xl', 'text-center', 'flex', 'justify-center', 'uppercase') 
         //window.location.href = '/clients' 
@@ -82,7 +82,7 @@ async function createLead(data) {
             }
         })
         const data = response.data
-        console.log(data)
+       // console.log(data)
         createdLead.innerHTML = `${data.name} ${data.lastName}`
     } catch (error) {
         console.log(error)  
@@ -206,7 +206,7 @@ const getLanguages = async () => {
     try {
         const response = await axios.get('/api/languages/allLanguages')
         const data = response.data  
-        console.log(data)
+     //   console.log(data)
         createLanguages(data)
     } catch (error) {
         console.log(error)
@@ -346,7 +346,7 @@ const getTypeofcases = async () => {
     try {
         const response = await axios.get('/api/typeofcases/allTypeofcases')
         const data = response.data
-        console.log(data)
+       // console.log(data)
         createTypeofcases(data)
     } catch (error) {
         console.log(error)
@@ -369,7 +369,7 @@ const getStatus = async () => {
     try {
         const response = await axios.get('/api/status/allStatus')
         const data = response.data
-        console.log(data)
+     //   console.log(data)
         createStatus(data)
     } catch (error) {   
         console.log(error)
@@ -391,7 +391,7 @@ const getMarketings = async () => {
     try {
         const response = await axios.get('/api/marketings/allMarketing')
         const data = response.data  
-        console.log(data)
+      //  console.log(data)
         createMarketings(data)
     } catch (error) {
         console.log(error)
@@ -414,7 +414,7 @@ const getLegalRepresentatives = async () => {
     try {
         const response = await axios.get('/api/users/allUsers/')
         const data = response.data
-        console.log(data)
+     //   console.log(data)
         createLegalRepresentatives(data)
     } catch (error) {
         console.log(error)
@@ -461,7 +461,7 @@ update.addEventListener('click', async (e) => {
     }
     try {
         const response = await axios.put('/api/clients/updateOneClient', leadUp)
-        console.log(response)
+      //  console.log(response)
         window.location.href = '/clients'
         //cleanHTML(leadTable)
         //createLeadTable()
@@ -469,7 +469,7 @@ update.addEventListener('click', async (e) => {
         console.log(error)
     }
 
-    console.log(leadUp)
+   // console.log(leadUp)
 })
 
 cancel.addEventListener('click', (e) => {

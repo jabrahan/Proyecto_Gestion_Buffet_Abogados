@@ -47,6 +47,7 @@ app.get(`/edit-lead/:id`, (req, res) => {
         res.redirect("/404")
      }
 })
+app.use("/reports", express.static(path.resolve("views", "reports")));
 
 
 //Routes Backend

@@ -125,10 +125,10 @@ const getGenders = async () => {
     try {
         const response = await axios.get('/api/genders/allGenders')
         const data = response.data
-        console.log(data)
+        //console.log(data)
         createGenders(data)
     } catch (error) {
-        console.log(error)
+        //console.log(error)
     }
 }
 
@@ -152,10 +152,10 @@ const getLanguages = async () => {
     try {
         const response = await axios.get('/api/languages/allLanguages')
         const data = response.data  
-        console.log(data)
+      //  console.log(data)
         createLanguages(data)
     } catch (error) {
-        console.log(error)
+       // console.log(error)
     }
 }
 
@@ -178,10 +178,10 @@ const getTypeofcases = async () => {
     try {
         const response = await axios.get('/api/typeofcases/allTypeofcases')
         const data = response.data
-        console.log(data)
+     //   console.log(data)
         createTypeofcases(data)
     } catch (error) {
-        console.log(error)
+       // console.log(error)
     }
 }
 
@@ -203,10 +203,10 @@ const getStatus = async () => {
     try {
         const response = await axios.get('/api/status/allStatus')
         const data = response.data
-        console.log(data)
+      //  console.log(data)
         createStatus(data)
     } catch (error) {   
-        console.log(error)
+      //  console.log(error)
     }
 }
 
@@ -228,10 +228,10 @@ const getMarketings = async () => {
     try {
         const response = await axios.get('/api/marketings/allMarketing')
         const data = response.data  
-        console.log(data)
+     //   console.log(data)
         createMarketings(data)
     } catch (error) {
-        console.log(error)
+     //   console.log(error)
     }
 }
 
@@ -253,10 +253,10 @@ const getLegalRepresentatives = async () => {
     try {
         const response = await axios.get('/api/users/allUsers/')
         const data = response.data
-        console.log(data)
+      //  console.log(data)
         createLegalRepresentatives(data)
     } catch (error) {
-        console.log(error)
+      //  console.log(error)
     }
 }
 
@@ -308,7 +308,7 @@ submit.addEventListener('click', async (e) => {
     }
 
    
-    console.log(client)
+   // console.log(client)
 
     if (firstName.value === '') {
         createNotification('true', 'Please complete the required fields')
@@ -326,7 +326,7 @@ submit.addEventListener('click', async (e) => {
 
             
             const response = await axios.post('/api/clients/addClient', client)
-            console.log(response)
+        //    console.log(response)
             if (response.status === 200) {
                // createNotification('false', 'Client added successfully')
                 form.reset()
