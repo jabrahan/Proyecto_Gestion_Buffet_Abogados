@@ -328,7 +328,7 @@ submit.addEventListener('click', async (e) => {
             const response = await axios.post('/api/clients/addClient', client)
             console.log(response)
             if (response.status === 200) {
-                createNotification('false', 'Client added successfully')
+               // createNotification('false', 'Client added successfully')
                 form.reset()
                 window.location.href = '/clients'
             

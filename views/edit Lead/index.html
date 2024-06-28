@@ -6,6 +6,7 @@
     <title>Edit Lead</title>
     <link href="../../src/css/output.css" rel="stylesheet">
     <link href="../../src/css/navSideBar.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         const user = JSON.parse(localStorage.getItem('user'))
@@ -13,9 +14,12 @@
         if(!user) {
             window.location.href = '/'
         }
+
+       
     </script>
+    <script src="editLead.js" type="module"></script>
 </head>
-<body >
+<body class="collapsed" >
     <div>
     
         <nav class="fixed pb-8 h-full" id="nav">
@@ -26,15 +30,148 @@
             
 </div>s
 
-            <main class="relative main_menu" >
-             
+            <main class="relative main_collapse" >
+                <div class="my-4 flex  " id="lead">
+                    <div class="w-full flex flex-col">
+                        <div class="flex-1 bg-white rounded-lg shadow-xl p-8">
+                            <h1 id="leadName"></h1>
+                            <h6 > Created by: <strong id="created"></strong></h6>
+                        </div>
+                    </div>
+                </div>
+                <form>
+                <div class="my-4 flex  " id="lead">
+                    <div class="w-full flex flex-col">
+                        <div class="flex-1 bg-white rounded-lg shadow-xl p-8">
+                            <h4 class="text-2xl text-gray-900 font-bold my-8">Personal Info</h4>
+                            <ul class="mt-2 text-gray-700">
+                                <li class="flex border-y py-2">
+                                    <span class="font-bold w-24">Name:</span>
+                                    <input class=" text-gray-700" type="text" id="name" value="" style="width: -webkit-fill-available;">
+                                </li>
+                                <li class="flex border-y py-2">
+                                    <span class="font-bold w-24">Last Name:</span>
+                                    <input class=" text-gray-700" type="text" id="lastName" value="" style="width: -webkit-fill-available;">
+                                </li>
+                                <li class="flex border-y py-2">
+                                    <span class="font-bold w-24">Email:</span>
+                                    <input class=" text-gray-700" type="email" id="email" value="" style="width: -webkit-fill-available;">
+                                </li>
+                                <li class="flex border-y py-2">
+                                    <span class="font-bold w-24">Phone:</span>
+                                    <input class=" text-gray-700" type="phone" id="phone" value="" style="width: -webkit-fill-available;">
+                                </li>
+                                <li class="flex border-y py-2">
+                                    <span class="font-bold w-24">Address:</span>
+                                    <input class=" text-gray-700" type="address" id="address" value="" style="width: -webkit-fill-available;">
+                                </li>
+                                <li class="flex border-y py-2">
+                                    <span class="font-bold w-24">Language:</span>
+                                    <select class="text-gray-700" id="language">
+                                        <option id="optionLead"></option>
+                                    </select>
+                                </li>
+                                <li class="flex border-y py-2">
+                                    <span class="font-bold w-24">Gender:</span>
+                                    <select class="text-gray-700" id="gender">
+                                        <option id="genderLead"></option>
+                                    </select>
+                                </li>
+                                <li class="flex border-y py-2">
+                                    <span class="font-bold w-24">State:</span>
+                                    <select class="text-gray-700" id="state">
+                                        <option id="stateLead"></option>
+                                    </select>
+                                </li>
+                                <li class="flex border-y py-2">
+                                    <span class="font-bold w-24">City:</span>
+                                    <select class="text-gray-700" id="city">
+                                        <option id="cityLead"></option>
+                                    </select>
+                                </li>
+                                <li class="flex border-y py-2">
+                                    <span class="font-bold w-24">ZIP:</span>
+                                    <input class=" text-gray-700" type="zip" id="zip" value="" style="width: -webkit-fill-available;">
+                                </li>
+
+                            </ul>
+                            <ul>
+                                <h4 class="text-2xl text-gray-900 font-bold my-8">Case Info</h4>
+                                <li class="flex border-y py-2">
+                                    <span class="font-bold ">Type of Case:</span>
+                                    <select class="text-gray-700" id="typeOfCase">
+                                        <option id="caseLead"></option>
+                                    </select>
+                                </li>
+                                <li class="flex border-y py-2">
+                                    <span class="font-bold ">Status of Case:</span>
+                                    <select class="text-gray-700" id="statusCase">
+                                        <option id="statusLead"></option>
+                                    </select>
+                                </li>   
+
+
+                            </ul>
+                            <ul>
+                                <h4 class="text-2xl text-gray-900 font-bold my-8">Marketing Info</h4>
+                                <li class="flex border-y py-2">
+                                    <span class="font-bold ">Marketing Source:</span>
+                                    <select class="text-gray-700" id="marketingSource">
+                                        <option id="marketingLead"></option>
+                                    </select>
+                                </li>  
+
+                            </ul>
+                            <ul>
+                                <h4 class="text-2xl text-gray-900 font-bold my-8">Related Contact Info</h4>
+                                <li class="flex border-y py-2">
+                                    <span class="font-bold w-24">Name:</span>
+                                    <input class=" text-gray-700" type="text" id="nameContact" value="" style="width: -webkit-fill-available;">
+                                </li>
+                                <li class="flex border-y py-2">
+                                    <span class="font-bold w-24">Phone:</span>
+                                    <input class=" text-gray-700" type="phone" id="phoneContact" value="" style="width: -webkit-fill-available;">
+                                </li>
+                                <li class="flex border-y py-2">
+                                    <span class="font-bold w-24">Email:</span>
+                                    <input class=" text-gray-700" type="email" id="emailContact" value="" style="width: -webkit-fill-available;">
+                                </li>
+
+
+                            </ul>
+                            <ul>
+                                <h4 class="text-2xl text-gray-900 font-bold my-8">Legal Representative</h4>
+                                <li class="flex border-y py-2">
+                                    <span class="font-bold ">Representative:</span>
+                                    <select class="text-gray-700" id="legalRepresentative">
+                                        <option id="legalLead"></option>
+                                    </select>
+                                </li>
+                            
+
+                            </ul>
+                            <ul>
+                                <h4 class="text-2xl text-gray-900 font-bold my-8">Scheduled Date</h4>
+                                <li class="flex border-y py-2">
+                                    <span class="font-bold w-24">Date:</span>
+                                    <input class=" text-gray-700" type="date" id="date" value="" style="width: -webkit-fill-available;">
+                                </li>
+
+                            </ul>
+                        </div>
+                        <div class="flex justify-center w-full my-5 items-center flex-row gap-2">
+                            <button id="cancel" class="w-40 justify-center py-4 bg-red-700 rounded-lg text-white shadow-lg hover:bg-red-600">Cancel</button>
+                            <button id="update" class="w-60 justify-center py-4 bg-cyan-800 rounded-lg text-white hover:bg-cyan-600 hover:shadow-lg">Update Lead</button>
+                            </div>
+             </form>
    </main>
 
-
+   
     <script src="../components/nav.js"></script>
     <script src="../../src/js/navSideBar.js"></script>
     <script src="../components/navAccount.js"></script>
- 
+    <script src="./editLead.js "  type="module"></script>
+    
 </body>
 </html>
 

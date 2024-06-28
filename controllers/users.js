@@ -1,5 +1,6 @@
 const User = require("../models/user");
 const userRouter = require("express").Router();
+const { default: mongoose } = require('mongoose');
 
 userRouter.get("/", async (req, res) => {
    const user = await User.findOne({email: req.query.email})
@@ -70,6 +71,17 @@ userRouter.put("/updateOneUser", async (req, res) => {
     if (user) {
         res.status(200).json(user)
     } else {
+        res.status(201).sendStatus(201)
+    }
+});
+
+userRouter.get("/getUser", async (req, res) => {
+    const idt = req.query.idd
+    console.log(idt)
+    if(mongoose.Types.ObjectId.isValid(idt)) {
+    const user = await User.findOne({_id: idt})
+    res.status(200).json(user) } 
+    else {
         res.status(201).sendStatus(201)
     }
 });

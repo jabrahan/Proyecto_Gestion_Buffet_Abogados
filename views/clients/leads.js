@@ -102,6 +102,10 @@ function createLeads(data) {
         />
         </svg>`
 
+        btnEdit.onclick = async () => {
+            window.location.href = `/edit-Lead/?id=${_id}`
+        }
+
         tdButton.appendChild(btnDelete)
         tdButton.appendChild(btnEdit)
         td1.textContent = firstName + ' ' + lastName

@@ -11,6 +11,7 @@ const typeofcaseRouter = require("./controllers/typeofcases");
 const statusRouter = require("./controllers/status");
 const clientRouter = require("./controllers/clients");
 
+
 //Config BD
 
 async function conectBD() {
@@ -37,7 +38,15 @@ app.use("/dashboard", express.static(path.resolve("views", "dashboard")));
 app.use("/my-account", express.static(path.resolve("views", "my account")));
 app.use("/reports", express.static(path.resolve("views", "reports")));
 app.use("/404", express.static(path.resolve("views", "404")));
-
+app.use("/edit-lead", express.static(path.resolve("views", "edit Lead")));
+app.get(`/edit-lead/:id`, (req, res) => {
+     const id = req.params.id
+     if (id) {
+        res.sendFile(path.resolve("views", "edit Lead", "index.html"))
+     } else {
+        res.redirect("/404")
+     }
+})
 
 
 //Routes Backend

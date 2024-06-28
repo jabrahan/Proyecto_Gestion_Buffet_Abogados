@@ -1,3 +1,4 @@
+const { default: mongoose } = require('mongoose');
 const clients = require('../models/client');
 const clientRouter = require("express").Router();
 
@@ -54,8 +55,52 @@ clientRouter.delete("/deleteClient", async (req, res) => {
     res.status(200).json(client)
 })
 
+clientRouter.get("/getClient", async (req, res) => {
+    const idt = req.query.idd
+    console.log(idt)
+    if(mongoose.Types.ObjectId.isValid(idt)) {
+    const client = await clients.findOne({_id: idt})
+    res.status(200).json(client) } 
+    else {
+        res.status(404).json({msg: "Error"})
+    }
+})
 
+clientRouter.put("/updateOneClient", async (req, res) => {
+    console.log(req.body) 
+    const { firstName, lastName, phone, email, address, state, city, zipCode, gender, language, typeOfCase, status, marketingSource, legalRepresentative, date, nameContact, phoneContact, emailContact, notes, userCreated, scgheduleDate, id  } = req.body;
 
+    const lead = await clients.updateOne({_id: id}, {$set: {
+        firstName: firstName,
+        lastName: lastName,
+        phone: phone,
+        email: email,
+        address: address,
+        state: state,
+        city: city,
+        zipCode: zipCode,
+        gender: gender,
+        language: language,
+        typeOfCase: typeOfCase,
+        status: status,
+        marketingSource: marketingSource,
+        legalRepresentative: legalRepresentative,
+        date: date,
+        nameContact: nameContact,
+        phoneContact: phoneContact,
+        emailContact: emailContact,
+        notes:  notes,
+        userCreated: userCreated,
+        scgheduleDate: scgheduleDate
+    }})
+    console.log(lead)
+    if (lead) {
+        res.status(200).json(lead)
+    } else {
+        res.status(201).sendStatus(201)
+    }
+  
+  })
 
 
 module.exports = clientRouter
